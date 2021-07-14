@@ -29,8 +29,21 @@ name = 'Luca'
 surname = 'Predieri'
 age = '21'
 
-counter_1 = 0
-counter_2 = 0
+counter_a = 0
+counter_b = 0
+counter_c = 0
+counter_d = 0
+counter_e = 0
+counter_f = 0
+counter_g = 0
+counter_h = 0
+counter_i = 0
+counter_j = 0
+counter_k = 0
+counter_l = 0
+counter_m = 0
+counter_n = 0
+counter_o = 0
 
 infos = ReadDoc('test.txt')
 
@@ -96,21 +109,20 @@ doc.add_heading("Player's score:", 1)
 
 # Sidewalk related score section.
 doc.add_heading("Road's related score:", 2)
-ps = para.add_run(
-    " The sidewalk score is based on how many crosswalk blocks the user collides."
-)
-if 0 < counter_1 < 20:
+if 0 < counter_i < 20:
     para = doc.add_paragraph(
         "The user doesn't use the sidewalk as he should, only ")
     para.add_run(str(counter_i))
     para.add_run(
         ' points related to the sidewalk section are scored.')
-elif 20 < counter_1 < 40:
+elif 20 < counter_i < 40:
     para = doc.add_paragraph(
         "The user uses the sidewalk as he should, ")
     para.add_run(str(counter_i))
     para.add_run(
         " are the points related to the sidewalk section scored.")
+ps = para.add_run(
+    " The sidewalk score is based on how many crosswalk blocks the user collides.")
 
 # Cars related score section.
 
@@ -121,3 +133,4 @@ elif 20 < counter_1 < 40:
 ## Saving the doc and converting into a PDF.
 doc.save('prove.docx')
 convert("prove.docx")
+
