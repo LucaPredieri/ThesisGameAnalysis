@@ -107,7 +107,7 @@ paragraph.add_run(age).bold = True
 ## Player's score.
 doc.add_heading("Player's score:", 1)
 
-# Sidewalk related score section.
+# Sidewalk related score section. (try section)
 doc.add_heading("Road's related score:", 2)
 if 0 < counter_i < 20:
     para = doc.add_paragraph(
@@ -124,13 +124,35 @@ elif 20 < counter_i < 40:
 ps = para.add_run(
     " The sidewalk score is based on how many crosswalk blocks the user collides.")
 
-# Cars related score section.
+# Hit by a car section. #0001
 
-# Traffic light related score section.
+# Hit by a train section. #0010
 
-# People related score section.
+# Player didn't wait for the train. #0011
+
+# Player waited for the train section. #0100
+
+# Player crossed the street <2s section.  #0101
+
+# Player crossed the street <4s section. #0111
+
+# Player crossed the street cutting the zebras section. #1000
+
+# Player crossed the street (no tl) well section. #1001
+
+# Player crossed the street (no tl) badly section. #1010
+
+# Player hit a person section. #1011
+
+# Player helps the guy section. #1100
+
+# Player arrives section. #1101
+
+# Player walks in a good way section. #1110
+
+# Player walks in a bad way section. #1111
+
 
 ## Saving the doc and converting into a PDF.
 doc.save('prove.docx')
 convert("prove.docx")
-
